@@ -1,20 +1,21 @@
 package main
 
 type investigation struct {
-	id      int      `json:"id"`
-	name    string   `json:"name"`
-	users   []int    `json:"users_ID"`
-	admins  []int    `json:"admins_ID"`
-	wallets []wallet `json:"wallet"`
+	ID       int      `json:"id"`
+	Name     string   `json:"name"`
+	Users    []int    `json:"users_ID"`
+	Admins   []int    `json:"admins_ID"`
+	Wallets  []wallet `json:"wallet"`
+	Currency string   `json:"currency"`
 }
 
 type user struct {
-	id     int    `json:"id"`
-	name   string `json:"name"`
-	groups []int  `json:"groups_ID"`
+	ID     int    `json:"id"`
+	Name   string `json:"name"`
+	Groups []int  `json:"groups_ID"`
 }
 
 type group struct {
-	id   int    `json:"id"`
-	name string `json:"name"`
+	ID   int    `json:"id"`
+	Name string `json:"name"`
 }

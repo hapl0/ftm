@@ -36,19 +36,14 @@ func showUserCases(c *gin.Context) {
 
 }
 
-func showCase(c *gin.Context) {
-	articles := getAllArticles()
-
-	// Call the HTML method of the Context to render a template
+func showCase(c *gin.Context, caseID int) {
+	wallets := getAllWalletsFromCase(caseID)
 	c.HTML(
-		// Set the HTTP status to 200 (OK)
 		http.StatusOK,
-		// Use the index.html template
 		"index.html",
-		// Pass the data that the page uses
 		gin.H{
 			"title":   "Home Page",
-			"payload": articles,
+			"payload": wallets,
 		},
 	)
 
